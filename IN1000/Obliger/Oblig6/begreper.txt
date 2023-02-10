@@ -1,0 +1,10 @@
+
+*  Alle tall er fra og med-til og med.
+   F.eks 19-20 betyr linje 19 OG 20
+
+A: Linje  1
+B: Linje  19-20
+C: Linje  3-5
+D: Linje  7-16
+E: Linje  19-20
+G: Linje  19-20, 25-26, 31-32

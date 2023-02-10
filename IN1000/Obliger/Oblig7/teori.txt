@@ -1,0 +1,21 @@
+
+B)  Det er flere fordeler med å ha les_fil() utenfor konstruktøren. En fordel er
+    at det ikke MÅ bli oppgitt en txt fil, når vi oppretter en spilleliste. Slik
+    kan vi lage flere tomme spillelister, og legge til sanger etterpå. En annen
+    fordel er at vi kan lese inn flere txt filer til spillelisten
+
+C)  Vi bruker en liste fordi vi kun trenger å lagre objekter. Ved å bruke en liste
+    gjør vi programmet simplere når vi senere skal for eksempel gå igjennom listen for
+    å finne sanger av artister o.l. Hadde vi brukt en ordbok med artistnavn eller sangtittel
+    som nøkkelverdi, kan noe bli overskrevet, om for eksempel en sang har samme artist som en annen.
+
+D)  Da må vi bytte fra:
+
+    en_sang = Sang(alle_data[1], alle_data[0])
+
+    til
+
+    en_sang = Sang(alle_data[0], alle_data[1])
+
+    Siden alle_data[0] er tittel og alle_data[1] er artist, er det bare å bytte disse,
+    slik at det matcher parametrene i Sang konstruktøren. 

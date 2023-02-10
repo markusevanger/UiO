@@ -1,0 +1,5 @@
+
+
+1.  Innkapsling er ett prinsipp som går ut på å metoder som "hjemmer" innmaten sin for brukeren/utvikleren.
+    Metodene vi lager i en klasse blir det vi kaller "public facing", som er det bruker har tilgjengelig.
+    Det som er "non-public" er det funksjonen
