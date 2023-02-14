@@ -1,9 +1,5 @@
 class Hvit extends Resept {
 
-    private String farge = "hvit";
-    public Legemiddel legemiddel;
-
-
     //konstruktør med reit
     public Hvit(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit){
         super(id, legemiddel, utskrivendeLege, pasientId, reit);
@@ -22,6 +18,6 @@ class Hvit extends Resept {
     }
 
     public String farge(){
-        return farge;
+        return "hvit";
     }
 }

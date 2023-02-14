@@ -8,7 +8,7 @@ class Presp extends Hvit {
 
     public int prisAaBetale(){
 
-    int rabbatert_pris = (legemiddel.hentPris()-108);
+    int rabbatert_pris = (legemiddel.hentPris() - 108 );
     
     if (bruk()) { // om gyldig -> bruk
         if (rabbatert_pris > 0) { // om rabbatert pris er over 0, returner ny pris. 

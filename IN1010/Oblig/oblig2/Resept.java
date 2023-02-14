@@ -1,6 +1,6 @@
 abstract class Resept {
 
-    private final Legemiddel legemiddel;
+    public final Legemiddel legemiddel;
     private final Lege utskrivendeLege;
     private final int pasientId;
     private final int id;
