@@ -3,24 +3,28 @@ abstract class Resept {
     private final Legemiddel legemiddel;
     private final Lege utskrivendeLege;
     private final int pasientId;
+    private final int id;
     private int reit;
+   
 
     // konstruktør med reit
-    public Resept(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) { 
+    public Resept(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) { 
 
         this.legemiddel = legemiddel;
         this.utskrivendeLege = utskrivendeLege;
         this.pasientId = pasientId;
         this.reit = reit;
+        this.id = id;
     }
 
     // konstruktør uten reit
-    public Resept(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId) { 
+    public Resept(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId) { 
 
     this.legemiddel = legemiddel;
     this.utskrivendeLege = utskrivendeLege;
     this.pasientId = pasientId;
     this.reit = reit;
+    this.id = id;
     }
 
 
