@@ -3,7 +3,6 @@ class Hvit extends Resept {
     //konstruktør med reit
     public Hvit(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit){
         super(id, legemiddel, utskrivendeLege, pasientId, reit);
-        this.legemiddel = legemiddel;
     }
 
     // konstruktør uten reit.

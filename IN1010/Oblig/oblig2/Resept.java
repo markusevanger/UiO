@@ -52,7 +52,7 @@ abstract class Resept {
     // hent metoder
 
     public int hentId(){
-        return legemiddel.id;
+        return id;
     }
 
     public Legemiddel hentLegemiddel(){
@@ -65,6 +65,10 @@ abstract class Resept {
 
     public int hentReit(){
         return reit;
+    }
+
+    public int hentPasientID(){
+        return pasientId;
     }
 
 
