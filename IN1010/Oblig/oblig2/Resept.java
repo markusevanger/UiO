@@ -23,7 +23,7 @@ abstract class Resept {
     this.legemiddel = legemiddel;
     this.utskrivendeLege = utskrivendeLege;
     this.pasientId = pasientId;
-    this.reit = reit;
+    this.reit = 3;
     this.id = id;
     }
 

@@ -1,7 +1,7 @@
 class Hvit extends Resept {
 
     private String farge = "hvit";
-    private Legemiddel legemiddel;
+    public Legemiddel legemiddel;
 
 
     //konstruktør med reit
