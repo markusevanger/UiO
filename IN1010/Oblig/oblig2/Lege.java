@@ -10,4 +10,8 @@ class Lege {
     public String hentNavn(){
         return navn;
     }
+
+    public String toString(){
+        return navn;
+    }
 }

@@ -16,6 +16,8 @@ abstract class Resept {
         this.utskrivendeLege = utskrivendeLege;
         this.pasientId = pasientId;
         this.reit = reit;
+
+        
         id = teller;
         teller++;
     }

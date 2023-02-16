@@ -28,4 +28,8 @@ abstract class Legemiddel { // abstract = umulig å danne en klasse av Legemidde
 
         this.pris = pris;
     }
+
+    public String toString(){
+        return navn;
+    }
 }
