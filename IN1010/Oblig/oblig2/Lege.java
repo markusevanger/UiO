@@ -2,9 +2,9 @@ class Lege {
 
     private String navn;
 
-    public Lege(){
+    public Lege(String navn){
 
-        navn = "Emil";
+        this.navn = navn;
     }
 
     public String hentNavn(){

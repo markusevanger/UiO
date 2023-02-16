@@ -1,13 +1,13 @@
 class Hvit extends Resept {
 
     //konstruktør med reit
-    public Hvit(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit){
-        super(id, legemiddel, utskrivendeLege, pasientId, reit);
+    public Hvit(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit){
+        super(legemiddel, utskrivendeLege, pasientId, reit);
     }
 
     // konstruktør uten reit.
-    public Hvit(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId){
-        super(id, legemiddel, utskrivendeLege, pasientId);
+    public Hvit(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId){
+        super(legemiddel, utskrivendeLege, pasientId);
     }
 
 

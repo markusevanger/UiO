@@ -1,7 +1,7 @@
 class Blaa extends Resept {
 
-        public Blaa(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit){
-        super(id, legemiddel, utskrivendeLege, pasientId, reit);
+        public Blaa(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit){
+        super(legemiddel, utskrivendeLege, pasientId, reit);
     }
 
         public String farge(){

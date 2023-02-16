@@ -1,8 +1,8 @@
 class MilResept extends Hvit {
 
     
-    public MilResept(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId) { // uten reit, tar i bruk passende konstruktor
-    super(id, legemiddel, utskrivendeLege, pasientId);
+    public MilResept( Legemiddel legemiddel, Lege utskrivendeLege, int pasientId) { // uten reit, tar i bruk passende konstruktor
+    super(legemiddel, utskrivendeLege, pasientId);
     }
 
     public int prisAaBetale(){

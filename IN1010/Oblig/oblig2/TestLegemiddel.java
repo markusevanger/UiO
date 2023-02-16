@@ -5,15 +5,12 @@ class TestLegemiddel {
 
     public static void main(String[] args) {
 
-        int id_teller = 0;
 
         // String navn, int pris, double virkestoff
 
-        Narkotisk narko = new Narkotisk("Tylenol", 10, 11.11, id_teller, 5);
-        id_teller++;
-        Vanedannende vane = new Vanedannende("Nesespray", 20, 22.22, id_teller, 2);
-        id_teller++;
-        Vanlig vanlig = new Vanlig("Paracet", 30, 33.33, id_teller);
+        Narkotisk narko = new Narkotisk("Tylenol", 10, 11.11, 5);
+        Vanedannende vane = new Vanedannende("Nesespray", 20, 22.22, 2);
+        Vanlig vanlig = new Vanlig("Paracet", 30, 33.33);
 
         Legemiddel[] arr = new Legemiddel[3];
 

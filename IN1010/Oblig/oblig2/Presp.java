@@ -1,7 +1,7 @@
 class Presp extends Hvit {
 
-    public Presp(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit){
-        super(id, legemiddel, utskrivendeLege, pasientId, reit);
+    public Presp(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit){
+        super(legemiddel, utskrivendeLege, pasientId, reit);
     }
 
 

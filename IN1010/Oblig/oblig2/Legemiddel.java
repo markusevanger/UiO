@@ -2,17 +2,20 @@ abstract class Legemiddel { // abstract = umulig å danne en klasse av Legemidde
 
     public final String navn;
     public final double virkestoff; 
-    public final int id;
     public int pris;
+
+    private static int teller = 0;
+    public final int id;
     
 
 
-    public Legemiddel(String navn, int pris, double virkestoff, int id) {
+    public Legemiddel(String navn, int pris, double virkestoff) {
 
         this.navn = navn;
         this.pris = pris;
         this.virkestoff = virkestoff;
-        this.id = id;
+        id = teller;
+        teller++;
     }
     
 

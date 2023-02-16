@@ -3,28 +3,32 @@ abstract class Resept {
     public final Legemiddel legemiddel;
     private final Lege utskrivendeLege;
     private final int pasientId;
-    private final int id;
     private int reit;
+
+    private static int teller = 0;
+    public final int id;
    
 
     // konstruktør med reit
-    public Resept(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) { 
+    public Resept(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit) { 
 
         this.legemiddel = legemiddel;
         this.utskrivendeLege = utskrivendeLege;
         this.pasientId = pasientId;
         this.reit = reit;
-        this.id = id;
+        id = teller;
+        teller++;
     }
 
     // konstruktør uten reit
-    public Resept(int id, Legemiddel legemiddel, Lege utskrivendeLege, int pasientId) { 
+    public Resept(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId) { 
 
-    this.legemiddel = legemiddel;
-    this.utskrivendeLege = utskrivendeLege;
-    this.pasientId = pasientId;
-    this.reit = 3;
-    this.id = id;
+        this.legemiddel = legemiddel;
+        this.utskrivendeLege = utskrivendeLege;
+        this.pasientId = pasientId;
+        this.reit = 3;
+        id = teller;
+        teller++;
     }
 
 
