@@ -1,6 +1,6 @@
 class Blaa extends Resept {
 
-    private String farge = "blaa";
+    private String farge = "blaa"
 
         public Blaa(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit){
         super(legemiddel, utskrivendeLege, pasientId, reit);

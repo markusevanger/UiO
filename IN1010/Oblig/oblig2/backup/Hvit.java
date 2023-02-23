@@ -1,6 +1,6 @@
 class Hvit extends Resept {
 
-    private String farge = "hvit";
+    private String hvit = "hvit";
 
     //konstruktør med reit
     public Hvit(Legemiddel legemiddel, Lege utskrivendeLege, int pasientId, int reit){
