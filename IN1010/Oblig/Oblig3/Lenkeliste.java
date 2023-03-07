@@ -1,98 +1,51 @@
+abstract class Lenkeliste<E> implements Liste<E>{
 
 
-// LENKELISTE KODE:
 
-abstract class Lenkeliste <E> implements Liste<E> {
+    protected Node start_node = new Node(null);
 
-    private int stoerrelse;
-    private E element;
-    private Node forste;
-    
+    public int stoerrelse(){ // returner antall lenkete objekter. 
 
-    public Lenkeliste(){
-
-        forste = new Node(null);
-        
-    }
-
-
-    public void leggTil(E element){
-
-        if (forste.hentElement() == null){
-            forste.byttElement(element);
+        int teller = 0;
+        Node peker_node = start_node;
+        while (peker_node.element != null ){
+            peker_node = peker_node.neste;
+            teller++;
         }
-        else {
-            forste.settNeste(element);
-        }
-
-    }
-
-    public int stoerrelse(){
-        return (forste.hentLenkeStorrelse()-1);
-    }
-}
-
-
-
-
-
-// NODE KODE
-
-
-class Node<E> {
-
-    public Node nesteElement;
-    public E element;
-    public int indeks;
-
-    public static int teller = 0;
-    
-
-
-
-    public Node(E element){
-
-        this.element = element;
-
-        indeks = teller; 
-        teller++;
-
-        this.nesteElement = null;
-
-    }
-
-    public int hentIndeks(){
-        return indeks;
-    }
-    
-    public E hentElement(){
-        return element;
-    }
-
-    public Node hentNeste(){
-        return nesteElement;
-    }
-
-    public int hentLenkeStorrelse(){
         return teller;
-    }
+    } 
 
-    public void settNeste(E nyttElement){
-        
-        Node neste = new Node(nyttElement);
-        nesteElement = neste;
+    public void leggTil(E element){ // leggTil objekt på slutten
 
-    }
+        Node peker_node = start_node;
+        Node nyNode = new Node(element);
+        while (peker_node.element != null ){
+            peker_node = peker_node.neste;
+        }
+        peker_node = nyNode;
+    } 
 
-    public void byttElement(E nyttElement){
-        element = nyttElement;
+    public E hent(){  // returnerer elementet fra den første noden.
+        return start_node.element;
+    } 
+
+    public E fjern(){ // fjern element fra lenket liste
+
+    } 
+    //public String toString(){} //skriv ut String
+
+
+
+    // container
+    class Node<E>{
+
+
+        protected Node neste = null;
+        protected Node forrige = null;
+        protected E element;
+
+        public Node(E element){ //konstruktør Node
+            this.element = element;
+        }
     }
 }
-
-// opprette Node objekt ...
-// node objekt peker til new node objekt ...
-// peker til neste
-
-// node holder tall, indeks
-// if node.hentIndeks == indeks, return node.hentElement
-// else: node = node
