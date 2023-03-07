@@ -36,9 +36,18 @@ abstract class Lenkeliste<E> implements Liste<E>{
     public E fjern(){ // fjern element fra lenket liste
     
         Node slettet_node = start_node;
-        start_node = start_node.neste;
-        return slettet_node.element;
+
         
+        if (start_node.element != null){
+
+        start_node = start_node.neste;
+        start_node.forrige = null;
+        return slettet_node.element;
+        }
+
+        else {
+            throw new UgyldigListeindeks(0);
+        }
     } 
     
     public String toString(){ //skriv ut String
