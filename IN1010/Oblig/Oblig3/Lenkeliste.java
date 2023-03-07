@@ -2,7 +2,7 @@ abstract class Lenkeliste<E> implements Liste<E>{
 
 
 
-    protected Node start_node = new Node(null);
+    protected Node start_node;
 
     public int stoerrelse(){ // returner antall lenkete objekter. 
 
@@ -19,6 +19,7 @@ abstract class Lenkeliste<E> implements Liste<E>{
 
         Node peker_node = start_node;
         Node nyNode = new Node(element);
+
         while (peker_node.element != null ){
             peker_node = peker_node.neste;
         }
@@ -31,6 +32,7 @@ abstract class Lenkeliste<E> implements Liste<E>{
 
     public E fjern(){ // fjern element fra lenket liste
 
+    
     } 
     //public String toString(){} //skriv ut String
 
@@ -44,8 +46,8 @@ abstract class Lenkeliste<E> implements Liste<E>{
         protected Node forrige = null;
         protected E element;
 
-        public Node(E element){ //konstruktør Node
-            this.element = element;
+        public Node(E data){ //konstruktør Node
+            element = data;
         }
     }
 }
