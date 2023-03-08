@@ -1,38 +1,24 @@
-class EgenTest {
+class EgenTest<E extends Comparable<E>> {
 
 
-    public static void main(String[] args){
+       public static void main(String[] args){
+
+              Prioritetskoe<String> k = new Prioritetskoe<String>();
+
+              k.settInn("B");
+              System.out.println(k.toString());
+              System.out.println(k.stoerrelse());
+
+              k.settInn("A");
+              System.out.println(k.toString());
+              System.out.println(k.stoerrelse());
 
 
-        Stabel<String> k = new Stabel<String>();
+              k.fjern();
+              System.out.println(k.hent());
+              System.out.println(k.toString());
+              System.out.println(k.stoerrelse());
 
-        System.out.println(k.stoerrelse());
-        System.out.println(k.toString());
-
-        k.leggTil("Anne");
-        System.out.println(k.stoerrelse());
-        System.out.println(k.toString());
-
-        k.leggTil("Berit");
-        System.out.println(k.stoerrelse());
-        System.out.println(k.toString());
-
-        k.leggTil("Chris");
-        System.out.println(k.stoerrelse());
-        System.out.println(k.toString());
-
-        k.fjern();
-        System.out.println(k.stoerrelse());
-        System.out.println(k.toString());
-
-        k.fjern();
-        System.out.println(k.stoerrelse());
-        System.out.println(k.toString());
-
-        k.fjern();
-        System.out.println(k.stoerrelse());
-        System.out.println(k.toString());
-
+       }
 }
 
-}

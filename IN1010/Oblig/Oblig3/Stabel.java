@@ -1,5 +1,6 @@
 class Stabel <E> extends Lenkeliste<E> {
 
+    @Override
     public void leggTil(E x){ // leggTil objekt på starten
         
         
