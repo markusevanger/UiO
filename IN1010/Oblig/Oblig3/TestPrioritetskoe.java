@@ -64,8 +64,6 @@ class TestPrioritetskoe {
 	k = new Prioritetskoe<>();
 	k.leggTil("B");  k.leggTil("D");  k.leggTil("C");  k.leggTil("A");
 	k.leggTil("Z");  k.leggTil("X");
-	System.out.println(k.toString());
-	System.out.println(k.hent());
 	k.fjern();
 	String h1 = k.hent();
 	info(3, "Bruk av hent()");
