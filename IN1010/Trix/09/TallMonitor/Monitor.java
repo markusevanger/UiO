@@ -1,37 +1,68 @@
-
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Monitor{
 
-    private int detMinste = 0;
-    private int detStorste = 0;
+    public int detMinste = 0;
+    public int detStorste = 0;
+    private Lock laas = new ReentrantLock();
 
 
     public Monitor(int tall1, int tall2){
 
-        if (tall1 > tall2){
-            detMinste = tall2;
-            detStorste = tall1;
-            return;
+        laas.lock();
+
+        try{
+            if (tall1 > tall2){
+                detMinste = tall2;
+                detStorste = tall1;
+                return;
+            }
+            // tall1 =< tall2
+            detMinste = tall1;
+            detStorste = tall2;
         }
-        // tall1 =< tall2
-        detMinste = tall1;
-        detStorste = tall2;
+        finally{
+            laas.unlock();
+        }
     }
 
 
     public boolean settStorste(int nyTall){
-        if (nyTall >= detMinste){
-            detStorste = nyTall;
-            return true;
+
+        laas.lock();
+
+        try{
+            if (nyTall >= detMinste){
+                detStorste = nyTall;
+                return true;
+            }
+            return false;
         }
-        return false;
+        finally {
+            laas.unlock();
+        }
     }
 
     public boolean settMinste(int nyTall){
-        if (nyTall <= detStorste){
-            detMinste = nyTall;
-            return true;
+        
+        laas.lock();
+
+        try{
+            if (nyTall <= detStorste){
+                detMinste = nyTall;
+                return true;
+            }
+            return false;
         }
-        return false;
+
+        finally{
+            laas.unlock();
+        }
+    }
+
+    @Override
+    public String toString(){
+        return ("Storste: " + detStorste + ", Minste: " + detMinste);
     }
 }

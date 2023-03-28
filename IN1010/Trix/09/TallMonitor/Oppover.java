@@ -23,7 +23,7 @@ class Oppover implements Runnable{
                 System.out.println(startTall);
             }
             else {
-                System.out.println("Klarte ikke aa sette minste: " + mon.toString());
+                System.out.println("Klarte ikke aa sette storste, " + mon.detStorste + " >= " + mon.detMinste);
                 return;
             }
         }

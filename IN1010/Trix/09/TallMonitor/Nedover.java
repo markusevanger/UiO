@@ -11,12 +11,12 @@ class Nedover implements Runnable{
     public void run(){
 
         while (true){
-            if (mon.settMinste(startTall)){
+            if (mon.settStorste(startTall)){
                 startTall--;
                 System.out.println(startTall);
             }
             else {
-                System.out.println("Klarte ikke aa sette storste: " + mon.toString());
+                System.out.println("Klarte ikke aa sette storste, " + mon.detStorste + " =< " + mon.detMinste);
                 return;
             }
         }
