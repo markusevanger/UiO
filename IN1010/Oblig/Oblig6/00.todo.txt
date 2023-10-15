@@ -1,0 +1,11 @@
+
+GUI:
+    -  Lage rutenett av knapper x * y størrelse. @done
+    -  Handle actions, toggle levende celler... @done
+    -  Start avslutt knapp. @done
+GOL:
+    - Lag game of life? @done
+
+KONTROLER:
+    - Lage bindeledd mellom GOL og GUI @done
+    - Kunne opprette GUI med GOL rutenett? @done
